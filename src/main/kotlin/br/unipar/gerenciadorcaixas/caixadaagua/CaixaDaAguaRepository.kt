@@ -8,9 +8,9 @@ interface CaixaDaAguaRepository : JpaRepository<CaixaDaAgua, Int> {
 
     fun findByAtivoTrueOrderByMarcaAscModeloAscCapacidadeAsc(): List<CaixaDaAgua>
 
-    fun existsByMarcaAndModeloAndCapacidade(marca: String, modelo: String, capacidade: Double): Boolean
+    fun existsByMarcaAndModeloAndCapacidade(marca: String, modelo: String, capacidade: Int): Boolean
 
-    fun existsByMarcaAndModeloAndCapacidadeAndIdNot(marca: String, modelo: String, capacidade: Double): Boolean
+    fun existsByMarcaAndModeloAndCapacidadeAndIdNot(marca: String, modelo: String, capacidade: Int, id: Int): Boolean
 
     @Modifying
     @Query("""

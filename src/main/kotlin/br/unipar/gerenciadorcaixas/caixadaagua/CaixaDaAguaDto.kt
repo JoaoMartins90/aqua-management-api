@@ -20,7 +20,7 @@ data class CaixaDaAguaRequest(
     val modelo: String,
 
     @field:Positive
-    val capacidade: Double,
+    val capacidade: Int,
 
     @field:Positive @field:Digits(integer = 4, fraction = 2)
     val altura: BigDecimal,
@@ -46,7 +46,7 @@ data class CaixaDaAguaResponse(
     val id: Int,
     val marca: String,
     val modelo: String,
-    val capacidade: Double,
+    val capacidade: Int,
     val altura: BigDecimal,
     val largura: BigDecimal,
     val profundidade: BigDecimal,
